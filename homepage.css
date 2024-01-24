@@ -14,6 +14,20 @@ body {
     padding-left: 1vmax;
 }
 
+.role {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 1;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+/* .profile_card {
+    align-items: flex-start;
+} */
+
 @media screen and (max-width: 768px) {
     .profile_container {
         background-color: rgb(150, 0, 50);
@@ -24,6 +38,7 @@ body {
     .profile_card {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;;
         justify-content: center;
         background-color: rgb(255, 255, 255);
         color: rgb(80, 80, 80);
@@ -32,6 +47,7 @@ body {
         flex: 1 1 0;
         min-height: 75vw;
     }
+
   }
 
   @media screen and (min-width: 769px) {
@@ -42,7 +58,8 @@ body {
         flex-wrap: wrap;
     }
     .profile_card {
-        display: flex;
+        align-items: flex-start;
+        display: flex; 
         flex-direction: column;
         justify-content: center;
         background-color: rgb(255, 255, 255);
@@ -51,6 +68,6 @@ body {
         padding: 1%;
         flex: 1 1 0;
         width: 0;
-        max-height: 75vw;
     }
+    
   }
