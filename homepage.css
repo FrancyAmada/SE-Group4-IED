@@ -19,6 +19,20 @@ body {
 .about-us img {
     max-width: 100%;
 }
+
+.about_us_logo {
+    padding: 1% 5%;
+    max-width: 20vw;
+}
+
+.about_us_content {
+    padding-left: 10%;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
 .top_container {
     font-size: xx-large;
     display: flex;
