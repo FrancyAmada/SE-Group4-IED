@@ -77,6 +77,10 @@ body {
 .content {
     justify-content: center;
     position: absolute;
+    overflow-wrap: break-word;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ; */
     text-align: center;
     flex: 1 1 0;
     font-size: 100%;
