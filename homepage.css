@@ -23,12 +23,6 @@ body {
     flex-direction: column;
     flex: 1 0 1;
 }
-.content {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 0;
-    font-size: 150%;
-}
 
 .profile_leader {
     background-color: rgb(150, 0, 50);
@@ -57,7 +51,23 @@ body {
     max-height: 40vw;
     max-width: 20vw;
     margin-right: 5%;
+    object-fit: cover;
 }
+
+.profile_card img {
+    width: 100%;
+    position: relative;
+}
+  
+.content {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    font-size: 100%;
+    opacity: 0%;
+  }
 
 @media screen and (max-width: 768px) {
     .profile_container {
@@ -92,11 +102,20 @@ body {
         display: flex; 
         flex-direction: column;
         justify-content: center;
-        background-color: rgb(255, 255, 255);
         color: rgb(80, 80, 80);
         margin: 2.5% 0.5% 2.5% 0.5%;
         padding: 1%;
         flex: 1 1 0;
         width: 0;
+    }
+}
+
+.profile_card:hover {
+    img {
+        opacity: 0%;
+    }
+    background-color: rgb(255, 255, 255);
+    .content {
+        opacity: 100%;
     }
 }
