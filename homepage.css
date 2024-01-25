@@ -131,7 +131,7 @@ body {
     background: linear-gradient(45deg, #fc0090, #0000ff,#00ff00,
                 #ff0000,#ffff00,#fc0090,#0000ff,#00ff00,#ffff00);
     background-size: 150%;
-    animation: shadow 20s linear infinite;
+    animation: rotate 1.5s linear infinite;
 }
 .round_image_outer:after {
     filter: blur(15px);
@@ -205,14 +205,6 @@ body {
     }
 }
 
-.profile_card:hover span:nth-child(1) { 
-    filter: blur(7px);
-}
-
-.profile_card:hover span:nth-child(2) { 
-    filter: blur(14px);
-}
-
 .profile_card img {
     border-radius: 5%;
     object-fit: cover;
@@ -242,11 +234,10 @@ body {
     }
 }
 
-.profile_card:before, .profile_card:after {
+.profile_card::before .profile_card:after {
     border-radius: 5%;
     z-index: -1;
     content: '';
-    position: absolute;
     width: calc(100% + 6px);
     height: calc(100% + 6px);
     top: -3px;
@@ -260,7 +251,6 @@ body {
 .profile_card:after {
     filter: blur(15px);
 }
-
 
 @keyframes rotate { 
     0% {
@@ -281,4 +271,4 @@ body {
     100% {
       background-position: 0 0;
     }
-  }
+}
