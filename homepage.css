@@ -6,11 +6,24 @@ body {
     font-family: "Roboto Mono", monospace;
     font-size: 100%;
   }
-
-.top_container {
+.about-us {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0%;
+    background-color: rgb(32, 32, 32);
+}
+
+.about-us img {
+    max-width: 20%;
+}
+.top_container {
+    font-size: xx-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: rgb(84, 84, 84);
     padding-left: 1vmax;
 }
