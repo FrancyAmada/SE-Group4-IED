@@ -5,6 +5,7 @@ body {
     background-color: rgb(32, 32, 32);
     font-family: "Roboto Mono", monospace;
     font-size: 100%;
+    z-index: -1;
   }
 
 .name {
@@ -69,7 +70,7 @@ body {
 .profile_leader {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(20, 20, 20, 0.15) 100%), radial-gradient(at top center, rgba(49, 49, 49, 0.4) 0%, rgba(0,0,0,0.40) 120%) #242424;
     background-blend-mode: multiply,multiply;
-    padding: 2.5% 2.5% 10% 5%;
+    padding: 2.5% 2.5% 5% 5%;
     justify-content: center;
 }
 
@@ -78,23 +79,46 @@ body {
     flex-direction: row;
     flex: 1 1 0;
     padding-right: 10%;
+    margin-bottom: 5%;
 }
 
 .leader_title {
-    padding: 0% 40% 5%;
+    padding: 0% 10% 0%;
     justify-content: center;
-    font-size: 350%;
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.profile_leader_image {
+    object-fit: contain;
 }
 
 .round_image {
     border-radius: 50%;
     background-color: white;
-    min-height: 40vw;
-    min-width: 40vw;
-    max-height: 40vw;
-    max-width: 20vw;
+    min-height: 20vw;
+    min-width: 30vw;
+    max-height: 30vw;
+    max-width: 30vw;
     margin-right: 5%;
     object-fit: cover;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.round_image_outer {
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    min-height: 20vw;
+    min-width: 30vw;
+    max-height: 30vw;
+    max-width: 30vw;
+    padding: 2%;
+    animation: rotate 1.5s linear infinite;
+    background: linear-gradient(gold, cyan , beige );
+    z-index: 0;
 }
 
 .profile_card img {
@@ -115,6 +139,7 @@ body {
     font-size: 100%;
     opacity: 0%;
     min-width: 22.5%;
+    place-items: center;
   }
 
 @media screen and (max-width: 768px) {
@@ -124,6 +149,7 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        z-index: -2;
     }
     .profile_card {
         display: flex;
@@ -137,6 +163,8 @@ body {
         padding: 4%;
         flex: 1 1 0;
         min-height: 75vw;
+        object-fit: cover;
+        border-radius: 5%;
     }
 }
 
@@ -161,17 +189,49 @@ body {
     }
 }
 
+.profile_card:hover span:nth-child(1) { 
+    filter: blur(7px);
+}
+
+.profile_card:hover span:nth-child(2) { 
+    filter: blur(14px);
+}
+
+.profile_card img {
+    border-radius: 5%;
+    object-fit: cover;
+}
+
 .profile_card:hover {
+    border-radius: 5%;
+    animation: rotate 1.5s linear infinite;
+    background: linear-gradient(gold, cyan , beige );
+
     img {
-        opacity: 20%;
+        opacity: 80%;
+        border-radius: 5%;
+        object-fit: cover;
     }
-    background-color: rgb(27, 27, 27);
     .content {
-        /* justify-content: center; */
+        justify-content: center;
         position: absolute;
-        /* text-align: center; */
+        overflow-wrap: break-word;
+        /* display: flex;
+        flex-direction: column;
+        flex-wrap: wrap ; */
+        text-align: center;
         flex: 1 1 0;
         font-size: 100%;
         opacity: 100%;
+        min-width: 22.5%;
+    }
+}
+
+@keyframes rotate { 
+    0% {
+        filter: hue-rotate(0deg)
+    }
+    100% {
+        filter: hue-rotate(360deg);
     }
 }
