@@ -6,6 +6,18 @@ body {
     font-family: "Roboto Mono", monospace;
     font-size: 100%;
   }
+
+.name {
+    padding: 1% 1%;
+    text-align: center;
+    font-size: xx-large;
+    border: 2px;
+    border-style: solid;
+    border-radius: 3%;
+    border-color: black;
+    box-shadow: inset 0 -3em 3em rgba(20, 20, 20, 0.75);
+}
+
 .about-us {
     display: flex;
     flex-direction: row;
@@ -13,7 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 5% 0%;
-    background-color: rgb(32, 32, 32);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(20, 20, 20, 0.15) 100%), radial-gradient(at top center, rgba(49, 49, 49, 0.4) 0%, rgba(0,0,0,0.40) 120%) #242424;
+    background-blend-mode: multiply,multiply;
 }
 
 .about-us img {
@@ -38,7 +51,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgb(84, 84, 84);
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.15) 0%, rgba(15, 15, 15, 0.15) 100%), radial-gradient(at top center, rgba(49, 49, 49, 0.4) 0%, rgba(0,0,0,0.40) 120%) #333333;
+    background-blend-mode: multiply,multiply;
     padding-left: 1vmax;
 }
 
@@ -53,7 +67,8 @@ body {
 }
 
 .profile_leader {
-    background-color: rgb(46, 44, 47);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(20, 20, 20, 0.15) 100%), radial-gradient(at top center, rgba(49, 49, 49, 0.4) 0%, rgba(0,0,0,0.40) 120%) #242424;
+    background-blend-mode: multiply,multiply;
     padding: 2.5% 2.5% 10% 5%;
     justify-content: center;
 }
@@ -104,7 +119,8 @@ body {
 
 @media screen and (max-width: 768px) {
     .profile_container {
-        background-color: rgb(32, 32, 32);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(20, 20, 20, 0.15) 100%), radial-gradient(at top center, rgba(49, 49, 49, 0.4) 0%, rgba(0,0,0,0.40) 120%) #242424;
+        background-blend-mode: multiply,multiply;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -126,7 +142,8 @@ body {
 
 @media screen and (min-width: 769px) {
     .profile_container {
-        background-color: rgb(32, 32, 32);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(20, 20, 20, 0.15) 100%), radial-gradient(at top center, rgba(49, 49, 49, 0.4) 0%, rgba(0,0,0,0.40) 120%) #242424;
+        background-blend-mode: multiply,multiply;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
