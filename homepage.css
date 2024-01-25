@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 body {
-    background-color: rgb(200, 200, 200);
+    color: white;
+    background-color: rgb(32, 32, 32);
     font-family: "Roboto Mono", monospace;
     font-size: 100%;
   }
@@ -10,7 +11,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    background-color: rgb(150, 0, 50);
+    background-color: rgb(84, 84, 84);
     padding-left: 1vmax;
 }
 
@@ -25,7 +26,7 @@ body {
 }
 
 .profile_leader {
-    background-color: rgb(150, 0, 50);
+    background-color: rgb(46, 44, 47);
     padding: 2.5% 2.5% 10% 5%;
     justify-content: center;
 }
@@ -55,15 +56,15 @@ body {
 }
 
 .profile_card img {
+    transition: opacity 0.5s ease-in-out;
     width: 100%;
     position: relative;
 }
   
 .content {
+    justify-content: center;
     position: absolute;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     flex: 1 1 0;
     font-size: 100%;
     opacity: 0%;
@@ -71,7 +72,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .profile_container {
-        background-color: rgb(150, 0, 50);
+        background-color: rgb(32, 32, 32);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -82,7 +83,7 @@ body {
         flex-wrap: wrap;;
         justify-content: center;
         background-color: rgb(255, 255, 255);
-        color: rgb(80, 80, 80);
+        color: rgb(255, 255, 255);
         margin: 1% 2.5% 2% 2.5%;
         padding: 4%;
         flex: 1 1 0;
@@ -92,7 +93,7 @@ body {
 
 @media screen and (min-width: 769px) {
     .profile_container {
-        background-color: rgb(150, 0, 50);
+        background-color: rgb(32, 32, 32);
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -102,7 +103,7 @@ body {
         display: flex; 
         flex-direction: column;
         justify-content: center;
-        color: rgb(80, 80, 80);
+        color: rgb(255, 255, 255);
         margin: 2.5% 0.5% 2.5% 0.5%;
         padding: 1%;
         flex: 1 1 0;
@@ -112,10 +113,16 @@ body {
 
 .profile_card:hover {
     img {
-        opacity: 0%;
+        opacity: 20%;
     }
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(27, 27, 27);
     .content {
+        padding: 8% 5%;
+        /* justify-content: center; */
+        position: absolute;
+        /* text-align: center; */
+        flex: 1 1 0;
+        font-size: 100%;
         opacity: 100%;
     }
 }
